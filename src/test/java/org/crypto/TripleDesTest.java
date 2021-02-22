@@ -13,8 +13,10 @@ public class TripleDesTest {
     @Test
     public void testEncryptDecrypt() {
         val word = "1F3456ABCD1325D6";
+
         val encryptionResult = tripleDes.encrypt(word);
         val decryptionResult = tripleDes.decrypt(encryptionResult);
+
         assertEquals(word, decryptionResult.toUpperCase());
     }
 }
